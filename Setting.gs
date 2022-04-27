@@ -9,4 +9,4 @@ Setting.tweetContent     = 2
 Setting.monitoringTarget = 3
 Setting.lstTweetAt       = 4
 Setting.isTweetable      = 5
-Setting.maxWordCont      = 6
+Setting.maxWordCount     = 6

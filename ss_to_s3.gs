@@ -15,7 +15,15 @@ function ss_to_s3() {
   var csvString = '';
   for ( var i = 0; i < lastRow; i++ ) {
     if (data[i][Setting.amazonUrl] != '') {
-      csvString += '"' + data[i][Setting.amazonUrl] + '","' + data[i][Setting.targetPrice] + '","' + data[i][Setting.tweetContent] + '","' + data[i][Setting.monitoringTarget] + '","' + data[i][Setting.lstTweetAt] + '","' + data[i][Setting.isTweetable] + '","' + data[i][Setting.maxWordCont] + '"' + "\n";
+      csvString += '"' 
+                    + data[i][Setting.amazonUrl] + '","'
+                    + data[i][Setting.targetPrice] + '","'
+                    + data[i][Setting.tweetContent] + '","'
+                    + data[i][Setting.monitoringTarget]+ '","'
+                    + data[i][Setting.lstTweetAt] + '","'
+                    + data[i][Setting.isTweetable] + '","'
+                    + data[i][Setting.maxWordCount] + '"' 
+                    + "\n";
     }
   }
 
