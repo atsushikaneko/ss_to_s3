@@ -1,6 +1,10 @@
 class Setting {}
 
+// 対象シート名
 Setting.targetSheetName = 'シート1'
+
+// テーブルの範囲
+Setting.tableRange = 'A:G'
 
 // 列設定(0オリジン)
 Setting.amazonUrl        = 0

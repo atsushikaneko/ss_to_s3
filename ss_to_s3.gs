@@ -9,7 +9,7 @@ function ss_to_s3() {
   var sheet = ss.getSheetByName(Setting.targetSheetName);
   const lastRow = sheet.getLastRow();
   // データを取得
-  var data = sheet.getRange('A:G').getValues();
+  var data = sheet.getRange(Setting.tableRange).getValues();
 
   // 送信データ用の配列
   var csvString = '';
