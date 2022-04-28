@@ -13,16 +13,16 @@ function ss_to_s3() {
 
   // 送信データ用の配列
   var csvString = '';
-  for ( var i = 0; i < lastRow; i++ ) {
+  for ( var i = 1; i < lastRow; i++ ) {
     if (data[i][Setting.amazonUrl] != '') {
       csvString += '"' 
-                    + data[i][Setting.amazonUrl] + '","'
-                    + data[i][Setting.targetPrice] + '","'
-                    + data[i][Setting.tweetContent] + '","'
-                    + data[i][Setting.monitoringTarget]+ '","'
-                    + data[i][Setting.lstTweetAt] + '","'
-                    + data[i][Setting.isTweetable] + '","'
-                    + data[i][Setting.maxWordCount] + '"' 
+                    + data[i][Setting.asin] + '","'
+                    + data[i][Setting.desiredArrivalPrice] + '","'
+                    + data[i][Setting.postContent] + '","'
+                    + data[i][Setting.monitoringTarget] + '","'
+                    + data[i][Setting.lastNortificationDate] + '","'
+                    + data[i][Setting.nortificationPossibleStatus] + '","'
+                    + data[i][Setting.wordCountUpperLimit] + '"' 
                     + "\n";
     }
   }

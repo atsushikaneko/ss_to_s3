@@ -7,10 +7,10 @@ Setting.targetSheetName = 'シート1'
 Setting.tableRange = 'A:G'
 
 // 列設定(0オリジン)
-Setting.amazonUrl        = 0
-Setting.targetPrice      = 1
-Setting.tweetContent     = 2
-Setting.monitoringTarget = 3
-Setting.lstTweetAt       = 4
-Setting.isTweetable      = 5
-Setting.maxWordCount     = 6
+Setting.asin                        = 0
+Setting.desiredArrivalPrice         = 1
+Setting.postContent                 = 2
+Setting.monitoringTarget            = 3
+Setting.lastNortificationDate       = 4
+Setting.nortificationPossibleStatus = 5
+Setting.wordCountUpperLimit         = 6
