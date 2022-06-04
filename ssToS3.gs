@@ -1,4 +1,4 @@
-function ss_to_s3() {
+function ssToS3() {
   var awsAccessKeyId = PropertiesService.getScriptProperties().getProperty("awsAccessKeyId");
   var awsSecretKey = PropertiesService.getScriptProperties().getProperty("awsSecretKey");
 
@@ -20,6 +20,7 @@ function ss_to_s3() {
                     + data[i][Setting.desiredArrivalPrice] + '","'
                     + data[i][Setting.postContent] + '","'
                     + data[i][Setting.monitoringTarget] + '","'
+                    + data[i][Setting.tweetInterval] + '","'
                     + data[i][Setting.lastNortificationDate] + '","'
                     + data[i][Setting.nortificationPossibleStatus] + '","'
                     + data[i][Setting.wordCountUpperLimit] + '"' 
