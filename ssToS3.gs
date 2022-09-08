@@ -13,23 +13,21 @@ function ssToS3() {
 
   // 送信データ用の配列
   var csvString = '';
-  for ( var i = 1; i < lastRow; i++ ) {
+  for (var i = 1; i < lastRow; i++) {
     if (data[i][Setting.amazonUrl] != '') {
-      csvString += '"' 
-                    + data[i][Setting.asin] + '","'
-                    + data[i][Setting.desiredArrivalPrice] + '","'
-                    + data[i][Setting.postContent] + '","'
-                    + data[i][Setting.monitoringTarget] + '","'
-                    + data[i][Setting.tweetInterval] + '","'
-                    + data[i][Setting.lastNortificationDate] + '","'
-                    + data[i][Setting.nortificationPossibleStatus] + '","'
-                    + data[i][Setting.wordCountUpperLimit] + '"' 
-                    + "\n";
+      csvString += '"'
+        + data[i][Setting.asin] + '","'
+        + data[i][Setting.desiredArrivalPrice] + '","'
+        + data[i][Setting.postContent] + '","'
+        + data[i][Setting.monitoringTarget] + '","'
+        + data[i][Setting.tweetIntervalMinutes] + '","'
+        + data[i][Setting.isMonitoring] + '"'
+        + "\n";
     }
   }
 
   csv = Utilities.newBlob(csvString, "text/csv", "UTF-8");
-  
+
   var s3 = S3.getInstance(awsAccessKeyId, awsSecretKey);
-  s3.putObject( 'crawl-amazon-url-job', 'spreadsheet-data/item_list.csv', csv, {logRequests:true} );
+  s3.putObject('crawl-amazon-url-job', 'spreadsheet-data/item_list.csv', csv, { logRequests: true });
 }
